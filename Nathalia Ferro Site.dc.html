@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f6f1e6;-webkit-font-smoothing:antialiased}
+a{color:#a8862c;text-decoration:none}
+a:hover{color:#8a6d1f}
+@keyframes nfRise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+</style>
+</helmet>
+
+<div style="font-family:Jost,system-ui,sans-serif;color:#332e26;background:#f6f1e6">
+
+  <section style="position:relative;min-height:clamp(600px,92vh,860px);display:flex;flex-direction:column;overflow:hidden;background:#f6f1e6">
+
+    <img src="assets/bg-clinic.jpeg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%" />
+    <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(248,244,234,.96) 0%,rgba(248,244,234,.72) 34%,rgba(248,244,234,.28) 62%,rgba(248,244,234,.1) 100%)"></div>
+
+    <header style="position:relative;z-index:6;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px clamp(20px,5vw,64px)">
+      <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;letter-spacing:.18em;text-transform:uppercase;color:#3a3227">Nathália Ferro</div>
+      <nav style="display:flex;gap:clamp(16px,2.6vw,38px);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#6d6455">
+        <a href="#sobre" style="color:#6d6455">Sobre</a>
+        <a href="#servicos" style="color:#6d6455">Serviços</a>
+        <a href="#contato" style="color:#6d6455">Contato</a>
+      </nav>
+    </header>
+
+    <div style="position:relative;z-index:2;flex:1;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));align-items:end;gap:clamp(20px,3vw,40px);width:100%;max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+
+      <div style="position:relative;z-index:4;padding-bottom:clamp(40px,9vh,110px);animation:nfRise .8s ease both">
+        <p style="margin:0 0 20px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#a8862c">Estética avançada</p>
+        <h1 style="margin:0 0 22px;font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(40px,5.4vw,70px);line-height:1.04;letter-spacing:-.01em;color:#2e2921;text-wrap:pretty">Beleza que<br /><em style="font-style:italic;color:#a8862c">respeita</em> você</h1>
+        <p style="margin:0 0 34px;max-width:42ch;font-size:16px;line-height:1.7;color:#5f584c;text-wrap:pretty">Protocolos personalizados de estética facial e corporal, conduzidos com técnica, escuta e resultados naturais.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px">
+          <a href="#contato" style="display:inline-flex;align-items:center;padding:15px 30px;background:#c9a233;color:#fff;font-size:12px;letter-spacing:.18em;text-transform:uppercase;border-radius:2px" style-hover="background:#a8862c;color:#fff">Agendar avaliação</a>
+          <a href="#servicos" style="display:inline-flex;align-items:center;padding:15px 30px;border:1px solid rgba(51,46,38,.25);color:#3a3227;font-size:12px;letter-spacing:.18em;text-transform:uppercase;border-radius:2px" style-hover="border-color:#c9a233;color:#a8862c">Ver serviços</a>
+        </div>
+      </div>
+
+      <div style="position:relative;align-self:end;min-height:clamp(340px,60vh,640px);display:flex;align-items:flex-end;justify-content:center">
+        <div aria-hidden="true" style="position:absolute;left:50%;top:6%;width:clamp(280px,30vw,460px);aspect-ratio:1.55/1;transform:translateX(-50%) rotate(-16deg);border:clamp(10px,1.4vw,18px) solid #c9a233;border-radius:50%;border-right-color:transparent;border-bottom-color:transparent;opacity:.95"></div>
+        <div aria-hidden="true" style="position:absolute;left:50%;top:15%;width:clamp(170px,19vw,290px);aspect-ratio:1.45/1;transform:translateX(-64%) rotate(26deg);border:clamp(9px,1.2vw,15px) solid #d8b449;border-radius:50%;border-left-color:transparent;border-top-color:transparent;opacity:.8"></div>
+        <img src="assets/nathalia-cutout.png" alt="Nathália Ferro" style="position:relative;z-index:3;display:block;height:clamp(340px,62vh,660px);width:auto;max-width:100%;object-fit:contain;object-position:bottom;filter:drop-shadow(0 26px 44px rgba(90,74,40,.16));animation:nfRise 1s .15s ease both" />
+      </div>
+    </div>
+  </section>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}"></script>
+</body>
+</html>

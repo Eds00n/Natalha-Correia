@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FAF6EE;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+a{color:#C9A242;text-decoration:none}
+a:hover{color:#b08e31}
+@keyframes ncRise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes ncFade{from{opacity:0}to{opacity:1}}
+@keyframes ncLetter{from{opacity:0;transform:translateY(16px);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes ncLine{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes ncVeil{to{opacity:0;visibility:hidden;pointer-events:none}}
+
+</style>
+</helmet>
+
+<div style="font-family:Inter,system-ui,sans-serif;color:#211E1A;background:#FAF6EE">
+  <div aria-hidden="true" style="position:fixed;inset:0;z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;background:#FAF6EE;animation:ncVeil .9s 2.35s cubic-bezier(.33,1,.68,1) forwards">
+    <div style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-size:clamp(28px,4.6vw,52px);line-height:1.15;letter-spacing:.12em;color:#211E1A;text-align:center;padding:0 20px"><span style="display:inline-block;opacity:0;animation:ncLetter .7s cubic-bezier(.33,1,.68,1) 0.00s forwards">N</span><span style="display:inline-block;opacity:0;animation:ncLetter .7s cubic-bezier(.33,1,.68,1) 0.06s forwards">a</span><span style="display:inline-block;opacity:0;animation:ncLetter .7s cubic-bezier(.33,1,.68,1) 0.12s forwards">t</span><span style="display:inline-block;opacity:0;animation:ncLetter .7s cubic-bezier(.33,1,.68,1) 0.18s forwards">h</span><span style="display:inline-block;opacity:0;animation:ncLetter .7s cubic-bezier(.33,1,.68,1) 0.24s forwards">á</span><span style="display:inline-block;opacity:0;animation:ncLetter .7s cubic-bezier(.33,1,.68,1) 0.30s forwards">l</span><span style="display:inline-block;opacity:0;animation:ncLetter .7s cubic-bezier(.33,1,.68,1) 0.36s forwards">i</span><span style="display:inline-block;opacity:0;animation:ncLetter .7s cubic-bezier(.33,1,.68,1) 0.42s forwards">a</span><span style="display:inline-block;opacity:0;animation:ncLetter .7s cubic-bezier(.33,1,.68,1) 0.48s forwards">&nbsp;</span><span style="display:inline-block;opacity:0;animation:ncLetter .7s cubic-bezier(.33,1,.68,1) 0.54s forwards">C</span><span style="display:inline-block;opacity:0;animation:ncLetter .7s cubic-bezier(.33,1,.68,1) 0.60s forwards">o</span><span style="display:inline-block;opacity:0;animation:ncLetter .7s cubic-bezier(.33,1,.68,1) 0.66s forwards">r</span><span style="display:inline-block;opacity:0;animation:ncLetter .7s cubic-bezier(.33,1,.68,1) 0.72s forwards">r</span><span style="display:inline-block;opacity:0;animation:ncLetter .7s cubic-bezier(.33,1,.68,1) 0.78s forwards">e</span><span style="display:inline-block;opacity:0;animation:ncLetter .7s cubic-bezier(.33,1,.68,1) 0.84s forwards">i</span><span style="display:inline-block;opacity:0;animation:ncLetter .7s cubic-bezier(.33,1,.68,1) 0.90s forwards">a</span></div>
+    <div style="height:1px;width:min(200px,44vw);background:rgba(201,162,66,.7);transform-origin:left center;transform:scaleX(0);animation:ncLine 1s 1.05s cubic-bezier(.33,1,.68,1) forwards"></div>
+    
+  </div>
+
+
+  <section id="top" style="position:relative;overflow:hidden;background:#F4EDDF;min-height:clamp(540px,86vh,820px);display:flex">
+    <img src="assets/bg-clinic.jpeg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 50%">
+    <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(250,246,238,.97) 0%,rgba(250,246,238,.9) 30%,rgba(250,246,238,.55) 58%,rgba(250,246,238,.18) 100%)"></div>
+    <div aria-hidden="true" style="position: absolute; top: 3%; left: 4%; font-family: 'Cormorant Garamond',Georgia,serif; font-style: italic; font-weight: 300; font-size: clamp(300px,40vw,640px); line-height: .78; color: rgba(201,162,66,.16); pointer-events: none; user-select: none; ">N</div>
+
+    <div style="position:relative;z-index:3;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));grid-auto-rows:minmax(0,1fr);align-items:end;gap:clamp(24px,4vw,56px);width:100%;max-width:1320px;margin:0 auto;padding:clamp(40px,7vh,84px) clamp(20px,5vw,56px) 0">
+      <div style="position:relative;align-self:stretch;display:flex;align-items:flex-end;justify-content:center;min-height:clamp(320px,56vh,620px)">
+        
+      <img src="assets/nathalia-hero.png" alt="Nathália Correia, advogada" style="position:absolute;left:0;right:0;bottom:-8%;margin:0 auto;translate:-13% 0;z-index:2;display:block;width:min(100%,405px);height:auto;max-width:none;object-fit:contain;object-position:bottom;animation:ncFade 1s .12s ease both"></div>
+      <div style="padding-bottom: clamp(40px,8vh,96px); animation: ncRise .8s ease both; position: relative; z-index: 4">
+        <p style="margin:0 0 20px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#a8862c">Advocacia · OAB/AL 21.520</p>
+        <h1 style="margin:0 0 22px;font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(36px,4.6vw,60px);line-height:1.1;color:#211E1A;text-wrap:pretty">Defendendo seus direitos com técnica e <em style="font-style:italic;color:#a8862c">proximidade</em></h1>
+        <p style="margin:0 0 34px;max-width:44ch;font-size:16px;line-height:1.75;color:#55503f;text-wrap:pretty">Atuação em Direito Civil, Trabalhista e Previdenciário com análise cuidadosa de cada caso e comunicação clara do início ao fim.</p>
+        <a href="#contato" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;padding:16px 32px;background-color:#C9A242;background-image:linear-gradient(90deg,#1c1a16,#2b2722);background-repeat:no-repeat;background-position:left center;background-size:0% 100%;color:#211E1A;box-shadow:0 1px 2px rgba(33,30,26,.14);transition:background-size .45s cubic-bezier(.33,1,.68,1),color .28s ease,box-shadow .35s ease,transform .35s cubic-bezier(.33,1,.68,1);font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border-radius:4px;box-shadow:0 12px 28px rgba(201,162,66,.28)" style-hover="background-size:102% 102%;color:#F6F1E4;box-shadow:0 8px 20px -6px rgba(33,30,26,.45);transform:translateY(-1px)">Entre em contato</a>
+      </div>
+
+      
+    </div>
+  </section>
+
+  <section id="servicos" style="background:#fff;padding:clamp(64px,9vw,112px) clamp(20px,5vw,56px)">
+    <div style="max-width:1120px;margin:0 auto">
+      <h2 style="margin:0 0 clamp(36px,5vw,56px);text-align:center;font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(28px,3.4vw,42px);color:#211E1A">Nossos Serviços</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(18px,2.4vw,28px)">
+
+        <article data-reveal style="border:1px solid rgba(33,30,26,.14);border-radius:8px;padding:clamp(26px,3vw,36px);background:#fff;display:flex;flex-direction:column;gap:14px" style-hover="border-color:#C9A242;box-shadow:0 14px 34px rgba(33,30,26,.07)">
+          
+          <h3 style="margin:0;font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:21px;color:#211E1A">Direito Civil</h3>
+          <p style="margin:0;font-size:14.5px;line-height:1.7;color:#5b5548;text-wrap:pretty">Contratos, cobranças, responsabilidade civil, família e sucessões orientação e atuação judicial e extrajudicial.</p>
+        </article>
+
+        <article data-reveal style="border:1px solid rgba(33,30,26,.14);border-radius:8px;padding:clamp(26px,3vw,36px);background:#fff;display:flex;flex-direction:column;gap:14px" style-hover="border-color:#C9A242;box-shadow:0 14px 34px rgba(33,30,26,.07)">
+          
+          <h3 style="margin:0;font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:21px;color:#211E1A">Direito Trabalhista</h3>
+          <p style="margin:0;font-size:14.5px;line-height:1.7;color:#5b5548;text-wrap:pretty">Verbas rescisórias, reconhecimento de vínculo, horas extras e rescisão indireta, na defesa de quem trabalha.</p>
+        </article>
+
+        <article data-reveal style="border:1px solid rgba(33,30,26,.14);border-radius:8px;padding:clamp(26px,3vw,36px);background:#fff;display:flex;flex-direction:column;gap:14px" style-hover="border-color:#C9A242;box-shadow:0 14px 34px rgba(33,30,26,.07)">
+          
+          <h3 style="margin:0;font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:21px;color:#211E1A">Direito Previdenciário</h3>
+          <p style="margin:0;font-size:14.5px;line-height:1.7;color:#5b5548;text-wrap:pretty">Aposentadorias, auxílios, benefícios por incapacidade e revisões do requerimento ao recurso no INSS.</p>
+        </article>
+      </div>
+
+      <div style="display:flex;justify-content:center;margin-top:clamp(32px,4vw,48px)">
+        <a href="#contato" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;padding:15px 32px;background-color:#C9A242;background-image:linear-gradient(90deg,#1c1a16,#2b2722);background-repeat:no-repeat;background-position:left center;background-size:0% 100%;color:#211E1A;box-shadow:0 1px 2px rgba(33,30,26,.14);transition:background-size .45s cubic-bezier(.33,1,.68,1),color .28s ease,box-shadow .35s ease,transform .35s cubic-bezier(.33,1,.68,1);font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border-radius:4px" style-hover="background-size:102% 102%;color:#F6F1E4;box-shadow:0 8px 20px -6px rgba(33,30,26,.45);transform:translateY(-1px)">Falar com a advogada</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;overflow:hidden;background:#dedace;padding:clamp(64px,9vw,112px) clamp(20px,5vw,56px)">
+    <div aria-hidden="true" style="position:absolute;inset:-4% -6%;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none;user-select:none">
+      <span style="font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:clamp(140px,20vw,300px);line-height:.9;white-space:nowrap;color:transparent;-webkit-text-stroke:2px #cfcabc;margin-left:-11vw;margin-top:0;transform:rotate(-0.16deg)">Nathália Correia</span><span style="font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:clamp(140px,20vw,300px);line-height:.9;white-space:nowrap;color:transparent;-webkit-text-stroke:2px #cfcabc;margin-left:5vw;margin-top:0;transform:rotate(-0.16deg)">Nathália Correia</span>
+    </div>
+
+    <div style="position:relative;z-index:2;max-width:1120px;margin:0 auto">
+      <h2 style="margin:0 0 clamp(40px,5.5vw,64px);text-align:center;font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(28px,3.2vw,34px);color:#211E1A">Diferenciais</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:clamp(32px,5vw,72px)">
+        <div data-reveal style="display:flex;flex-direction:column;gap:15px;height:100%;text-align:left">
+          
+          <h3 style="margin:2px 0 0;font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:15.5px;letter-spacing:.01em;color:#211E1A">Compromisso</h3>
+          <p style="margin:0;font-size:14.5px;line-height:1.75;color:#4d4840;text-wrap:pretty">Cada processo é acompanhado de perto, com prazos respeitados e estratégia definida junto com você.</p>
+          <div style="margin-top:auto;padding-top:26px;border-bottom:1px solid rgba(33,30,26,.16)"></div>
+        </div>
+        <div data-reveal style="display:flex;flex-direction:column;gap:15px;height:100%;text-align:left">
+          
+          <h3 style="margin:2px 0 0;font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:15.5px;letter-spacing:.01em;color:#211E1A">Empatia</h3>
+          <p style="margin:0;font-size:14.5px;line-height:1.75;color:#4d4840;text-wrap:pretty">Escuta antes de estratégia: entender a sua situação por inteiro para orientar com clareza e cuidado.</p>
+          <div style="margin-top:auto;padding-top:26px;border-bottom:1px solid rgba(33,30,26,.16)"></div>
+        </div>
+        <div data-reveal style="display:flex;flex-direction:column;gap:15px;height:100%;text-align:left">
+          
+          <h3 style="margin:2px 0 0;font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:15.5px;letter-spacing:.01em;color:#211E1A">Disponibilidade</h3>
+          <p style="margin:0;font-size:14.5px;line-height:1.75;color:#4d4840;text-wrap:pretty">Contato direto por WhatsApp, respostas às suas dúvidas e acompanhamento em cada etapa do processo.</p>
+          <div style="margin-top:auto;padding-top:26px;border-bottom:1px solid rgba(33,30,26,.16)"></div>
+        </div>
+      </div>
+    </div></section>
+
+  <section id="quem-sou" style="position:relative;overflow:hidden;background:#fff;padding:clamp(64px,9vw,112px) clamp(20px,5vw,56px)">
+    <div style="position:relative;z-index:2;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));align-items:center;gap:clamp(32px,5vw,64px);max-width:1180px;margin:0 auto">
+      <div>
+        <h2 style="margin:0 0 24px;font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(28px,3.4vw,42px);color:#211E1A">Quem sou eu?</h2>
+        <p style="margin:0 0 18px;font-size:15.5px;line-height:1.8;color:#544f42;text-wrap:pretty">Sou Nathália Correia, advogada inscrita na <strong style="font-weight:600;color:#211E1A">OAB/AL 21.520</strong>, graduada em Direito pela Faculdade CESMAC do Agreste.</p>
+        <p style="margin:0 0 18px;font-size:15.5px;line-height:1.8;color:#544f42;text-wrap:pretty">Atualmente sou pós-graduanda em Direito Penal e Processo Penal, buscando aprofundamento técnico contínuo para atender cada cliente com segurança.</p>
+        <p style="margin:0 0 30px;font-size:15.5px;line-height:1.8;color:#544f42;text-wrap:pretty">Minha atuação se concentra em Direito Civil, Direito Trabalhista e Direito Previdenciário áreas em que as questões são, antes de tudo, questões de vida. Por isso trabalho com escuta, clareza e presença.</p>
+        <a href="#contato" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;padding:15px 32px;background-color:#C9A242;background-image:linear-gradient(90deg,#1c1a16,#2b2722);background-repeat:no-repeat;background-position:left center;background-size:0% 100%;color:#211E1A;box-shadow:0 1px 2px rgba(33,30,26,.14);transition:background-size .45s cubic-bezier(.33,1,.68,1),color .28s ease,box-shadow .35s ease,transform .35s cubic-bezier(.33,1,.68,1);font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border-radius:4px" style-hover="background-size:102% 102%;color:#F6F1E4;box-shadow:0 8px 20px -6px rgba(33,30,26,.45);transform:translateY(-1px)">Entre em contato</a>
+      </div>
+
+      <div style="position:relative;display:flex;justify-content:center;align-items:center;min-height:clamp(300px,46vw,480px)">
+        <div aria-hidden="true" style="position:absolute;right:-6%;top:50%;transform:translateY(-50%);font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(180px,24vw,380px);line-height:.8;color:rgba(201,162,66,.18);pointer-events:none;user-select:none">Na</div>
+        <img src="assets/nathalia-quem-sou.png" alt="Nathália Correia em seu escritório" style="position:relative;z-index:2;display:block;width:100%;max-width:400px;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%;border-radius:10px;box-shadow:0 2px 4px rgba(33,30,26,.08), 0 12px 24px rgba(33,30,26,.12), 0 38px 60px -12px rgba(33,30,26,.28), 0 60px 90px -30px rgba(90,74,40,.22)">
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" style="background:#211E1A;color:#FAF6EE;padding:clamp(64px,9vw,108px) clamp(20px,5vw,56px)">
+    <div style="max-width:880px;margin:0 auto;text-align:center">
+      <h2 style="margin:0 0 18px;font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(28px,3.6vw,44px);color:#FAF6EE;text-wrap:pretty">Vamos conversar sobre o seu caso</h2>
+      <p style="margin:0 auto 38px;max-width:52ch;font-size:16px;line-height:1.75;color:#c6bfb0;text-wrap:pretty">Me conte o que está acontecendo. A primeira conversa serve para entender a sua situação e os caminhos possíveis.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center">
+        <a href="https://wa.me/5582996348827" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;min-width:250px;box-sizing:border-box;padding:17px 34px;border:1px solid transparent;background-color:#C9A242;background-image:linear-gradient(90deg,#1e9e50,#25a85a);background-repeat:no-repeat;background-position:left center;background-size:0% 100%;color:#211E1A;box-shadow:0 1px 2px rgba(33,30,26,.14);transition:background-size .45s cubic-bezier(.33,1,.68,1),color .28s ease,box-shadow .35s ease,transform .35s cubic-bezier(.33,1,.68,1);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;border-radius:4px;gap:10px" style-hover="background-size:102% 102%;color:#ffffff;box-shadow:0 8px 20px -6px rgba(30,158,80,.45);transform:translateY(-1px)"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.15-.15.5-.58.65-.78.15-.2.2-.34.3-.56.1-.22.05-.42-.02-.57-.08-.15-.68-1.6-.93-2.19-.24-.57-.49-.48-.67-.49h-.57c-.2 0-.52.07-.79.37-.27.3-1.03 1-1.03 2.44 0 1.44 1.05 2.83 1.2 3.03.15.2 2.07 3.16 5.02 4.32 2.95 1.16 2.95.77 3.48.72.53-.05 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.57-.35Z"></path><path d="M12.04 2.2C6.64 2.2 2.25 6.58 2.25 11.98c0 1.9.55 3.68 1.5 5.18L2.2 21.8l4.78-1.5a9.74 9.74 0 0 0 5.06 1.42c5.4 0 9.79-4.39 9.79-9.79S17.44 2.2 12.04 2.2Zm0 17.86a8.05 8.05 0 0 1-4.35-1.28l-.31-.19-2.86.9.88-2.77-.2-.32a8.07 8.07 0 1 1 6.84 3.66Z"></path></svg>WhatsApp</a>
+        <a href="mailto:nathaliacorreiadpe@gmail.com" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;min-width:250px;box-sizing:border-box;padding:17px 34px;border:1px solid rgba(250,246,238,.35);background-color:transparent;background-image:linear-gradient(90deg,#c5221f,#d93025);background-repeat:no-repeat;background-position:left center;background-size:0% 100%;color:#FAF6EE;transition:background-size .45s cubic-bezier(.33,1,.68,1),color .28s ease,border-color .3s ease,transform .35s cubic-bezier(.33,1,.68,1);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;border-radius:4px;gap:10px" style-hover="border-color:#d93025;background-size:102% 102%;color:#ffffff;box-shadow:0 8px 20px -6px rgba(217,48,37,.4);transform:translateY(-1px)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"></rect><path d="m3.5 6.5 8.5 6 8.5-6"></path></svg>Enviar e-mail</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#191713;color:#8f887a;padding:26px clamp(20px,5vw,56px);display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;font-size:12.5px">
+    <span style="font-family:'Playfair Display',Georgia,serif;font-size:15px;color:#cfc7b8">Nathália Correia · Advogada</span>
+    <span>OAB/AL 21.520 · © 2026</span>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">class Component extends DCLogic {
+  componentDidMount() { this.setupReveal(); }
+  componentDidUpdate() { this.setupReveal(); }
+  setupReveal() {
+    const nodes = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (!nodes.length) return;
+    const groups = new Map();
+    nodes.forEach(el => {
+      if (el.dataset.revealReady) return;
+      el.dataset.revealReady = '1';
+      const p = el.parentElement;
+      const arr = groups.get(p) || [];
+      arr.push(el);
+      groups.set(p, arr);
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(22px)';
+      el.style.willChange = 'opacity, transform';
+    });
+    groups.forEach(arr => arr.forEach((el, i) => { el.dataset.revealDelay = i * 110; }));
+    if (!('IntersectionObserver' in window)) { nodes.forEach(el => this.show(el)); return; }
+    if (!this.io) {
+      this.io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { this.show(e.target); this.io.unobserve(e.target); }
+        });
+      }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+    }
+    nodes.forEach(el => { if (!el.dataset.revealObserved) { el.dataset.revealObserved = '1'; this.io.observe(el); } });
+  }
+  show(el) {
+    const d = Number(el.dataset.revealDelay || 0);
+    el.style.transition = 'opacity .7s cubic-bezier(.33,1,.68,1) ' + d + 'ms, transform .7s cubic-bezier(.33,1,.68,1) ' + d + 'ms';
+    requestAnimationFrame(() => { el.style.opacity = '1'; el.style.transform = 'none'; });
+  }
+  componentWillUnmount() { if (this.io) this.io.disconnect(); }
+}</script>
+</body>
+</html>
