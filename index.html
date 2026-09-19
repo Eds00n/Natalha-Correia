@@ -46,6 +46,49 @@
     *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
     [data-reveal]{opacity:1;transform:none}
   }
+
+  /* ===== Mobile-only size adjustments — same layout/positions as desktop (nothing stacks, nothing moves), only smaller ===== */
+  @media (max-width: 640px){
+    /* Hero: keep photo | text side by side, just scaled down — and a much shorter section so it isn't mostly empty space */
+    .hero-section{ min-height:0 !important; }
+    .hero-grid{ grid-template-columns:minmax(0,1fr) minmax(0,1.7fr) !important; grid-auto-rows:auto !important; gap:clamp(8px,3vw,16px) !important; padding:24px 16px 0 !important; }
+    .hero-photo-wrap{ min-height:0 !important; align-self:end !important; }
+    .hero-N-watermark{ font-size:min(38vw,150px) !important; }
+    .hero-text{ padding-bottom:22px !important; }
+    .hero-eyebrow{ font-size:clamp(6px,2vw,8px) !important; letter-spacing:.16em !important; margin-bottom:8px !important; }
+    .hero-h1{ font-size:clamp(15px,6.4vw,22px) !important; margin-bottom:8px !important; }
+    .hero-desc{ font-size:clamp(8px,2.8vw,10px) !important; line-height:1.5 !important; margin-bottom:12px !important; }
+    .hero-text .cta{ padding:8px 14px !important; font-size:clamp(6.5px,2vw,8px) !important; }
+
+    /* Serviços: keep 3 columns */
+    .servicos-grid{ grid-template-columns:repeat(3,1fr) !important; gap:clamp(6px,2vw,10px) !important; }
+    .service-card{ padding:clamp(8px,2.4vw,14px) !important; gap:6px !important; border-radius:6px !important; }
+    .service-card h3{ font-size:clamp(9px,3vw,12px) !important; }
+    .service-card p{ font-size:clamp(6.5px,2.1vw,8.5px) !important; line-height:1.35 !important; }
+    .servicos-cta-row .cta{ padding:9px 16px !important; font-size:8px !important; }
+
+    /* Diferenciais: keep 3 columns, with the same generous breathing room as desktop */
+    .diferenciais-section{ padding-top:96px !important; padding-bottom:96px !important; }
+    .diff-watermark{ font-size:44px !important; }
+    .diferenciais-h2{ margin-bottom:44px !important; }
+    .diferenciais-grid{ grid-template-columns:repeat(3,1fr) !important; column-gap:clamp(10px,3.5vw,20px) !important; row-gap:24px !important; }
+    .diferenciais-item{ gap:6px !important; }
+    .diferenciais-item h3{ font-size:clamp(8px,2.6vw,10.5px) !important; }
+    .diferenciais-item p{ font-size:clamp(6.5px,2vw,8px) !important; line-height:1.35 !important; }
+
+    /* Quem sou eu: keep text | photo side by side */
+    .quemsou-grid{ grid-template-columns:minmax(0,1.15fr) minmax(0,1fr) !important; gap:clamp(10px,3vw,18px) !important; }
+    .quemsou-watermark{ font-size:70px !important; }
+    .quemsou-h2{ font-size:clamp(14px,5.6vw,19px) !important; margin-bottom:8px !important; }
+    .quemsou-p{ font-size:clamp(7.5px,2.4vw,9.5px) !important; line-height:1.5 !important; margin-bottom:8px !important; }
+    .quemsou-text .cta{ padding:8px 14px !important; font-size:clamp(6.5px,2vw,8px) !important; }
+    .quemsou-photo{ border-radius:6px !important; }
+
+    /* Contato: keep the two buttons side by side */
+    .contact-actions{ gap:10px !important; }
+    .contact-actions a{ min-width:0 !important; padding:10px 14px !important; font-size:clamp(7px,2.2vw,9px) !important; gap:6px !important; }
+    .contact-actions svg{ width:12px !important; height:12px !important; }
+  }
 </style>
 </head>
 <body>
@@ -65,19 +108,19 @@
     <div style="height:1px;width:min(200px,44vw);background:rgba(201,162,66,.7);transform-origin:left center;transform:scaleX(0);animation:ncLine 1s 2.05s cubic-bezier(.33,1,.68,1) forwards"></div>
   </div>
 
-  <section id="top" style="position:relative;overflow:hidden;background:#F4EDDF;min-height:clamp(540px,86vh,820px);display:flex">
+  <section id="top" class="hero-section" style="position:relative;overflow:hidden;background:#F4EDDF;min-height:clamp(540px,86vh,820px);display:flex">
     <img src="assets/bg-clinic.jpeg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 50%">
     <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(250,246,238,.97) 0%,rgba(250,246,238,.9) 30%,rgba(250,246,238,.55) 58%,rgba(250,246,238,.18) 100%)"></div>
-    <div aria-hidden="true" style="position:absolute;top:3%;left:4%;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(300px,40vw,640px);line-height:.78;color:rgba(201,162,66,.16);pointer-events:none;user-select:none">N</div>
+    <div aria-hidden="true" class="hero-N-watermark" style="position:absolute;top:3%;left:4%;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(300px,40vw,640px);line-height:.78;color:rgba(201,162,66,.16);pointer-events:none;user-select:none">N</div>
 
-    <div style="position:relative;z-index:3;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));grid-auto-rows:minmax(0,1fr);align-items:end;gap:clamp(24px,4vw,56px);width:100%;max-width:1320px;margin:0 auto;padding:clamp(40px,7vh,84px) clamp(20px,5vw,56px) 0">
-      <div style="position:relative;align-self:stretch;display:flex;align-items:flex-end;justify-content:center;min-height:clamp(320px,56vh,620px)">
-        <img src="assets/nathalia-hero.png" alt="Nathália Correia, advogada" style="position:absolute;left:0;right:0;bottom:-8%;margin:0 auto;translate:-13% 0;z-index:2;display:block;width:min(100%,405px);height:auto;max-width:none;object-fit:contain;object-position:bottom;animation:ncFade 1s .12s ease both">
+    <div class="hero-grid" style="position:relative;z-index:3;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));grid-auto-rows:minmax(0,1fr);align-items:end;gap:clamp(24px,4vw,56px);width:100%;max-width:1320px;margin:0 auto;padding:clamp(40px,7vh,84px) clamp(20px,5vw,56px) 0">
+      <div class="hero-photo-wrap" style="position:relative;align-self:stretch;display:flex;align-items:flex-end;justify-content:center;min-height:clamp(320px,56vh,620px)">
+        <img src="assets/nathalia-hero.png" alt="Nathália Correia, advogada" class="hero-photo" style="position:absolute;left:0;right:0;bottom:-8%;margin:0 auto;translate:-13% 0;z-index:2;display:block;width:min(100%,405px);height:auto;max-width:none;object-fit:contain;object-position:bottom;animation:ncFade 1s .12s ease both">
       </div>
-      <div style="padding-bottom:clamp(40px,8vh,96px);animation:ncRise .8s ease both;position:relative;z-index:4">
-        <p style="margin:0 0 20px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#a8862c">Advocacia · OAB/AL 21.520</p>
-        <h1 style="margin:0 0 22px;font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(36px,4.6vw,60px);line-height:1.1;color:#211E1A;text-wrap:pretty">Defendendo seus direitos com técnica e <em style="font-style:italic;color:#a8862c">proximidade</em></h1>
-        <p style="margin:0 0 34px;max-width:44ch;font-size:16px;line-height:1.75;color:#55503f;text-wrap:pretty">Atuação em Direito Civil, Trabalhista e Previdenciário com análise cuidadosa de cada caso e comunicação clara do início ao fim.</p>
+      <div class="hero-text" style="padding-bottom:clamp(40px,8vh,96px);animation:ncRise .8s ease both;position:relative;z-index:4">
+        <p class="hero-eyebrow" style="margin:0 0 20px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#a8862c">Advocacia · OAB/AL 21.520</p>
+        <h1 class="hero-h1" style="margin:0 0 22px;font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(36px,4.6vw,60px);line-height:1.1;color:#211E1A;text-wrap:pretty">Defendendo seus direitos com técnica e <em style="font-style:italic;color:#a8862c">proximidade</em></h1>
+        <p class="hero-desc" style="margin:0 0 34px;max-width:44ch;font-size:16px;line-height:1.75;color:#55503f;text-wrap:pretty">Atuação em Direito Civil, Trabalhista e Previdenciário com análise cuidadosa de cada caso e comunicação clara do início ao fim.</p>
         <a href="#contato" class="cta cta-hero">Entre em contato</a>
       </div>
     </div>
@@ -86,7 +129,7 @@
   <section id="servicos" style="background:#fff;padding:clamp(64px,9vw,112px) clamp(20px,5vw,56px)">
     <div style="max-width:1120px;margin:0 auto">
       <h2 style="margin:0 0 clamp(36px,5vw,56px);text-align:center;font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(28px,3.4vw,42px);color:#211E1A">Nossos Serviços</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(18px,2.4vw,28px)">
+      <div class="servicos-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(18px,2.4vw,28px)">
 
         <article data-reveal class="service-card" style="border:1px solid rgba(33,30,26,.14);border-radius:8px;padding:clamp(26px,3vw,36px);background:#fff;display:flex;flex-direction:column;gap:14px">
           <h3 style="margin:0;font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:21px;color:#211E1A">Direito Civil</h3>
@@ -104,30 +147,30 @@
         </article>
       </div>
 
-      <div style="display:flex;justify-content:center;margin-top:clamp(32px,4vw,48px)">
+      <div class="servicos-cta-row" style="display:flex;justify-content:center;margin-top:clamp(32px,4vw,48px)">
         <a href="#contato" class="cta">Falar com a advogada</a>
       </div>
     </div>
   </section>
 
-  <section style="position:relative;overflow:hidden;background:#dedace;padding:clamp(64px,9vw,112px) clamp(20px,5vw,56px)">
+  <section class="diferenciais-section" style="position:relative;overflow:hidden;background:#dedace;padding:clamp(64px,9vw,112px) clamp(20px,5vw,56px)">
     <div aria-hidden="true" style="position:absolute;inset:-4% -6%;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none;user-select:none">
-      <span style="font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:clamp(140px,20vw,300px);line-height:.9;white-space:nowrap;color:transparent;-webkit-text-stroke:2px #cfcabc;margin-left:-11vw;margin-top:0;transform:rotate(-0.16deg)">Nathália Correia</span>
-      <span style="font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:clamp(140px,20vw,300px);line-height:.9;white-space:nowrap;color:transparent;-webkit-text-stroke:2px #cfcabc;margin-left:5vw;margin-top:0;transform:rotate(-0.16deg)">Nathália Correia</span>
+      <span class="diff-watermark" style="font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:clamp(140px,20vw,300px);line-height:.9;white-space:nowrap;color:transparent;-webkit-text-stroke:2px #cfcabc;margin-left:-11vw;margin-top:0;transform:rotate(-0.16deg)">Nathália Correia</span>
+      <span class="diff-watermark" style="font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:clamp(140px,20vw,300px);line-height:.9;white-space:nowrap;color:transparent;-webkit-text-stroke:2px #cfcabc;margin-left:5vw;margin-top:0;transform:rotate(-0.16deg)">Nathália Correia</span>
     </div>
 
     <div style="position:relative;z-index:2;max-width:1120px;margin:0 auto">
-      <h2 style="margin:0 0 clamp(40px,5.5vw,64px);text-align:center;font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(28px,3.2vw,34px);color:#211E1A">Diferenciais</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:clamp(32px,5vw,72px)">
-        <div data-reveal style="display:flex;flex-direction:column;gap:15px;height:100%;text-align:left">
+      <h2 class="diferenciais-h2" style="margin:0 0 clamp(40px,5.5vw,64px);text-align:center;font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(28px,3.2vw,34px);color:#211E1A">Diferenciais</h2>
+      <div class="diferenciais-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:clamp(32px,5vw,72px)">
+        <div data-reveal class="diferenciais-item" style="display:flex;flex-direction:column;gap:15px;height:100%;text-align:left">
           <h3 style="margin:2px 0 0;font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:15.5px;letter-spacing:.01em;color:#211E1A">Compromisso</h3>
           <p style="margin:0;font-size:14.5px;line-height:1.75;color:#4d4840;text-wrap:pretty">Cada processo é acompanhado de perto, com prazos respeitados e estratégia definida junto com você.</p>
         </div>
-        <div data-reveal style="display:flex;flex-direction:column;gap:15px;height:100%;text-align:left">
+        <div data-reveal class="diferenciais-item" style="display:flex;flex-direction:column;gap:15px;height:100%;text-align:left">
           <h3 style="margin:2px 0 0;font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:15.5px;letter-spacing:.01em;color:#211E1A">Empatia</h3>
           <p style="margin:0;font-size:14.5px;line-height:1.75;color:#4d4840;text-wrap:pretty">Escuta antes de estratégia: entender a sua situação por inteiro para orientar com clareza e cuidado.</p>
         </div>
-        <div data-reveal style="display:flex;flex-direction:column;gap:15px;height:100%;text-align:left">
+        <div data-reveal class="diferenciais-item" style="display:flex;flex-direction:column;gap:15px;height:100%;text-align:left">
           <h3 style="margin:2px 0 0;font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:15.5px;letter-spacing:.01em;color:#211E1A">Disponibilidade</h3>
           <p style="margin:0;font-size:14.5px;line-height:1.75;color:#4d4840;text-wrap:pretty">Contato direto por WhatsApp, respostas às suas dúvidas e acompanhamento em cada etapa do processo.</p>
         </div>
@@ -136,18 +179,18 @@
   </section>
 
   <section id="quem-sou" style="position:relative;overflow:hidden;background:#fff;padding:clamp(64px,9vw,112px) clamp(20px,5vw,56px)">
-    <div style="position:relative;z-index:2;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));align-items:center;gap:clamp(32px,5vw,64px);max-width:1180px;margin:0 auto">
-      <div>
-        <h2 style="margin:0 0 24px;font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(28px,3.4vw,42px);color:#211E1A">Quem sou eu?</h2>
-        <p style="margin:0 0 18px;font-size:15.5px;line-height:1.8;color:#544f42;text-wrap:pretty">Sou Nathália Correia, advogada inscrita na <strong style="font-weight:600;color:#211E1A">OAB/AL 21.520</strong>, graduada em Direito pela Faculdade CESMAC do Agreste.</p>
-        <p style="margin:0 0 18px;font-size:15.5px;line-height:1.8;color:#544f42;text-wrap:pretty">Atualmente sou pós-graduanda em Direito Penal e Processo Penal, buscando aprofundamento técnico contínuo para atender cada cliente com segurança.</p>
-        <p style="margin:0 0 30px;font-size:15.5px;line-height:1.8;color:#544f42;text-wrap:pretty">Minha atuação se concentra em Direito Civil, Direito Trabalhista e Direito Previdenciário — áreas em que as questões são, antes de tudo, questões de vida. Por isso trabalho com escuta, clareza e presença.</p>
+    <div class="quemsou-grid" style="position:relative;z-index:2;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));align-items:center;gap:clamp(32px,5vw,64px);max-width:1180px;margin:0 auto">
+      <div class="quemsou-text">
+        <h2 class="quemsou-h2" style="margin:0 0 24px;font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(28px,3.4vw,42px);color:#211E1A">Quem sou eu?</h2>
+        <p class="quemsou-p" style="margin:0 0 18px;font-size:15.5px;line-height:1.8;color:#544f42;text-wrap:pretty">Sou Nathália Correia, advogada inscrita na <strong style="font-weight:600;color:#211E1A">OAB/AL 21.520</strong>, graduada em Direito pela Faculdade CESMAC do Agreste.</p>
+        <p class="quemsou-p" style="margin:0 0 18px;font-size:15.5px;line-height:1.8;color:#544f42;text-wrap:pretty">Atualmente sou pós-graduanda em Direito Penal e Processo Penal, buscando aprofundamento técnico contínuo para atender cada cliente com segurança.</p>
+        <p class="quemsou-p" style="margin:0 0 30px;font-size:15.5px;line-height:1.8;color:#544f42;text-wrap:pretty">Minha atuação se concentra em Direito Civil, Direito Trabalhista e Direito Previdenciário — áreas em que as questões são, antes de tudo, questões de vida. Por isso trabalho com escuta, clareza e presença.</p>
         <a href="#contato" class="cta">Entre em contato</a>
       </div>
 
       <div style="position:relative;display:flex;justify-content:center;align-items:center;min-height:clamp(300px,46vw,480px)">
-        <div aria-hidden="true" style="position:absolute;right:-6%;top:50%;transform:translateY(-50%);font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(180px,24vw,380px);line-height:.8;color:rgba(201,162,66,.18);pointer-events:none;user-select:none">Na</div>
-        <img src="assets/nathalia-quem-sou.jpg" alt="Nathália Correia em seu escritório" style="position:relative;z-index:2;display:block;width:100%;max-width:400px;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%;border-radius:10px;box-shadow:0 2px 4px rgba(33,30,26,.08), 0 12px 24px rgba(33,30,26,.12), 0 38px 60px -12px rgba(33,30,26,.28), 0 60px 90px -30px rgba(90,74,40,.22)">
+        <div aria-hidden="true" class="quemsou-watermark" style="position:absolute;right:-6%;top:50%;transform:translateY(-50%);font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:500;font-size:clamp(180px,24vw,380px);line-height:.8;color:rgba(201,162,66,.18);pointer-events:none;user-select:none">Na</div>
+        <img src="assets/nathalia-quem-sou.jpg" alt="Nathália Correia em seu escritório" class="quemsou-photo" style="position:relative;z-index:2;display:block;width:100%;max-width:400px;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%;border-radius:10px;box-shadow:0 2px 4px rgba(33,30,26,.08), 0 12px 24px rgba(33,30,26,.12), 0 38px 60px -12px rgba(33,30,26,.28), 0 60px 90px -30px rgba(90,74,40,.22)">
       </div>
     </div>
   </section>
@@ -156,14 +199,14 @@
     <div style="max-width:880px;margin:0 auto;text-align:center">
       <h2 style="margin:0 0 18px;font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:clamp(28px,3.6vw,44px);color:#FAF6EE;text-wrap:pretty">Vamos conversar sobre o seu caso</h2>
       <p style="margin:0 auto 38px;max-width:52ch;font-size:16px;line-height:1.75;color:#c6bfb0;text-wrap:pretty">Me conte o que está acontecendo. A primeira conversa serve para entender a sua situação e os caminhos possíveis.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center">
+      <div class="contact-actions" style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center">
         <a href="https://wa.me/5582996348827" target="_blank" rel="noopener" class="cta cta-wa" style="justify-content:center"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.15-.15.5-.58.65-.78.15-.2.2-.34.3-.56.1-.22.05-.42-.02-.57-.08-.15-.68-1.6-.93-2.19-.24-.57-.49-.48-.67-.49h-.57c-.2 0-.52.07-.79.37-.27.3-1.03 1-1.03 2.44 0 1.44 1.05 2.83 1.2 3.03.15.2 2.07 3.16 5.02 4.32 2.95 1.16 2.95.77 3.48.72.53-.05 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.57-.35Z"></path><path d="M12.04 2.2C6.64 2.2 2.25 6.58 2.25 11.98c0 1.9.55 3.68 1.5 5.18L2.2 21.8l4.78-1.5a9.74 9.74 0 0 0 5.06 1.42c5.4 0 9.79-4.39 9.79-9.79S17.44 2.2 12.04 2.2Zm0 17.86a8.05 8.05 0 0 1-4.35-1.28l-.31-.19-2.86.9.88-2.77-.2-.32a8.07 8.07 0 1 1 6.84 3.66Z"></path></svg>WhatsApp</a>
         <a href="mailto:nathaliacorreiadpe@gmail.com" class="cta cta-mail" style="justify-content:center"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"></rect><path d="m3.5 6.5 8.5 6 8.5-6"></path></svg>Enviar e-mail</a>
       </div>
     </div>
   </section>
 
-  <footer style="background:#191713;color:#8f887a;padding:26px clamp(20px,5vw,56px);display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;font-size:12.5px">
+  <footer class="site-footer" style="background:#191713;color:#8f887a;padding:26px clamp(20px,5vw,56px);display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;font-size:12.5px">
     <span style="font-family:'Playfair Display',Georgia,serif;font-size:15px;color:#cfc7b8">Nathália Correia · Advogada</span>
     <span>OAB/AL 21.520 · © 2026</span>
   </footer>
